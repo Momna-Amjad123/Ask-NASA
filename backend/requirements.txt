@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# Ask-NASA — backend Python dependencies
+#
+# Declared for the eventual FastAPI service. NOT installed during Phase 0.
+# Install later (Phase 1+) inside a virtual environment:
+#
+#   cd backend
+#   python -m venv .venv
+#   source .venv/bin/activate      # Windows: .venv\Scripts\activate
+#   pip install -r requirements.txt
+#
+# Versions are pinned to recent stable releases. Keep this list minimal;
+# add a dependency only when a concrete requirement exists
+# (see docs/ROADMAP.md section 23).
+# ---------------------------------------------------------------------------
+
+# Web framework + ASGI server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Request/response validation and typed settings
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Load environment variables from a local .env file
+python-dotenv==1.0.1
+
+# Async HTTP client for calling NASA APIs and the LLM provider
+httpx==0.28.1
